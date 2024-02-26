@@ -28,7 +28,7 @@ closeCart.addEventListener('click', () => {
                 newProduct.innerHTML = 
                 `<img src="${product.image}" alt="">
                 <h2>${product.name}</h2>
-                <div class="price">₹${product.price}</div>
+                <div class="price">$${product.price}</div>
                 <button class="addCart">Add To Cart</button>`;
                 listProductHTML.appendChild(newProduct);
             });
@@ -144,3 +144,20 @@ const initApp = () => {
     })
 }
 initApp();
+
+
+//checkout functionality
+const checkoutButton = document.querySelector('.checkOut');
+checkoutButton.addEventListener('click', () => {
+    // Display notification message
+    alert('Order placed!');
+
+    // Clear the cart
+    cart = []; // Reset the cart array to an empty array
+
+    // Update cart HTML to reflect the empty cart
+    addCartToHTML();
+
+    // Clear cart from memory
+    localStorage.removeItem('cart');
+});
