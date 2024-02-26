@@ -167,4 +167,7 @@ body.showCart .container{
     border: 1px solid #f5c6cb;
     padding: 10px 20px;
     border-radius: 5px;
+    display: none;
+}
+
 }
